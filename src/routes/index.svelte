@@ -152,7 +152,7 @@
 	.terminal-content {
 		@apply p-4;
 		@apply flex flex-col items-start;
-		@apply h-[16rem];
+		@apply min-h-[16rem];
 		@apply w-full;
 		@apply overflow-auto;
 	}

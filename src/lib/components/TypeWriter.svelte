@@ -17,7 +17,7 @@
 			}, speed);
 		}, delay);
 
-		if (loop)
+		if (loop) {
 			setTimeout(() => {
 				clearInterval(interval);
 				p = 0;
@@ -28,6 +28,7 @@
 					}, speed);
 				}, delay);
 			}, 30000);
+		}
 	});
 </script>
 
