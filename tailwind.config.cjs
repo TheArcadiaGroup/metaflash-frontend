@@ -11,8 +11,13 @@ module.exports = {
 			},
 			light: {
 				// light theme colors
-			}
-		}
+			},
+			colors: {
+				project: {
+					'bg': '#121316',
+				}	,	
+			},
+		},
 	},
 	variants: {
 		extend: {}
