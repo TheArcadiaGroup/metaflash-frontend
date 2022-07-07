@@ -10,10 +10,23 @@
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
 			rel="stylesheet"
 		/>
+		<link href="http://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
 		%svelte.head%
 	</head>
 
 	<body>
 		<div id="svelte">%svelte.body%</div>
 	</body>
+
+	<style>
+		html,
+		body,
+		div#svelte {
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			background: #121316;
+			font-family: 'SF Pro Display', sans-serif;
+		}
+	</style>
 </html>
