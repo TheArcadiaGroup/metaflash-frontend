@@ -185,12 +185,12 @@
 		@apply h-full w-full;
 		@apply overflow-hidden;
 		@apply pointer-events-none;
+		@apply flex flex-col items-center justify-end;
 	}
 
 	.image {
-		@apply w-full;
-		@apply absolute;
-		@apply bottom-0;
+		@apply w-full min-w-[60rem];
+		@apply -mb-[40vw];
 		@apply blur-[100px];
 		@apply opacity-20;
 	}
