@@ -74,7 +74,7 @@
 	</div>
 	<div class="footer">
 		<div class="footer-content">
-			<div>© Copyright Meta Flash Loan {new Date().getFullYear()}</div>
+			<div class="text-[#D0D1D2]">© Copyright Meta Flash Loan {new Date().getFullYear()}</div>
 			<div class="justify-self-center">Made with ❤️ by <a href=".">Lorem Ipsum</a></div>
 		</div>
 	</div>
