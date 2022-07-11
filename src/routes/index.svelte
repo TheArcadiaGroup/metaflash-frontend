@@ -2,7 +2,7 @@
 	import TypeWriter from '$lib/components/TypeWriter.svelte';
 	import Circle from '$lib/icons/Circle.svelte';
 
-	let speed = 50;
+	let speed = 20;
 </script>
 
 <div class="content">
@@ -32,40 +32,32 @@
 					</div>
 					<div class="terminal-content">
 						<div class="text-[#FFE600]">
-							<TypeWriter text="# Upload using cURL" {speed} loop />
+							<TypeWriter text="# Upload using cURL" />
 						</div>
 						<div>
 							<TypeWriter
 								text="$ curl --upload-file ./hello.txt https://transfer.sh/hello.txt https://transfer.sh/Bvdxtp/hello.txt"
 								delay={20 * speed}
-								{speed}
-								loop
 							/>
 						</div>
 						<div class="my-2" />
 						<div class="text-[#FFE600]">
-							<TypeWriter text="# Using the shell function" delay={120 * speed} {speed} loop />
+							<TypeWriter text="# Using the shell function" delay={120 * speed} />
 						</div>
 						<div>
+							<TypeWriter text="$ transfer hello.txt" delay={150 * speed} />
 							<TypeWriter
-								text="$ transfer hello.txt <br />#####################################################<br />
-							100.0% https://transfer.sh/QkDtA5/hello.txt"
-								delay={150 * speed}
-								{speed}
-								loop
+								text="#####################################################"
+								delay={170 * speed}
 							/>
+							<TypeWriter text="100.0% https://transfer.sh/QkDtA5/hello.txt" delay={223 * speed} />
 						</div>
 						<div class="my-2" />
 						<div class="text-[#FFE600]">
-							<TypeWriter text="# Upload from web" delay={280 * speed} {speed} loop />
+							<TypeWriter text="# Upload from web" delay={280 * speed} />
 						</div>
 						<div>
-							<TypeWriter
-								text="Drag your files here, or click to browse."
-								delay={300 * speed}
-								{speed}
-								loop
-							/>
+							<TypeWriter text="Drag your files here, or click to browse." delay={300 * speed} />
 						</div>
 					</div>
 				</div>
@@ -78,16 +70,16 @@
 			<div class="justify-self-center">Made with ❤️ by <a href=".">Lorem Ipsum</a></div>
 		</div>
 	</div>
-</div>
-<div class="bg-image">
-	<img src="/images/png/rectangle.png" alt="background" class="image" />
+	<div class="bg-image">
+		<img src="/images/png/rectangle.png" alt="background" class="image" />
+	</div>
 </div>
 
 <style lang="postcss">
 	.content {
 		@apply relative;
 		@apply z-10;
-		@apply w-full h-full;
+		@apply w-full min-h-full;
 		@apply flex flex-col items-center;
 		@apply text-white;
 	}
@@ -178,10 +170,16 @@
 		@apply underline;
 	}
 
+	.header,
+	.middle,
+	.footer {
+		@apply z-20;
+	}
+
 	.bg-image {
-		@apply z-0;
+		@apply z-10;
 		@apply absolute;
-		@apply top-0 left-0;
+		@apply bottom-0 left-0;
 		@apply h-full w-full;
 		@apply overflow-hidden;
 		@apply pointer-events-none;
@@ -191,7 +189,8 @@
 	.image {
 		@apply w-full min-w-[60rem];
 		@apply -mb-[40vw];
-		@apply blur-[100px];
+		/* @apply blur-[100px]; */
+		@apply blur-[50px];
 		@apply opacity-20;
 	}
 </style>
