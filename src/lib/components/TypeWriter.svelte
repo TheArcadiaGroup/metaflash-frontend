@@ -1,35 +1,32 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	export let speed = 100;
+	let show = false;
+	onMount(() => (show = true));
 	export let delay = 0;
 	export let text: string = '';
-	export let loop = false;
 
-	let p = 0;
-	$: shownText = text.slice(0, p);
-	let interval;
+	function typewriter(node, { speed = 5 }) {
+		const valid = node.childNodes.length === 1 && node.childNodes[0].nodeType === Node.TEXT_NODE;
 
-	onMount(() => {
-		setTimeout(() => {
-			interval = setInterval(() => {
-				p++;
-			}, speed);
-		}, delay);
-
-		if (loop) {
-			setTimeout(() => {
-				clearInterval(interval);
-				p = 0;
-
-				setTimeout(() => {
-					interval = setInterval(() => {
-						p++;
-					}, speed);
-				}, delay);
-			}, 30000);
+		if (!valid) {
+			throw new Error(`This transition only works on elements with a single text node child`);
 		}
-	});
+
+		const text = node.textContent;
+		const duration = text.length / (speed * 0.01);
+
+		return {
+			duration,
+			delay,
+			tick: (t) => {
+				const i = Math.trunc(text.length * t);
+				node.textContent = text.slice(0, i);
+			}
+		};
+	}
 </script>
 
-{@html shownText}
+{#if show}
+	<p transition:typewriter>{@html text}</p>
+{/if}
