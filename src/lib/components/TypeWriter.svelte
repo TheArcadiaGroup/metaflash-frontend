@@ -30,3 +30,4 @@
 {#if show}
 	<p transition:typewriter>{@html text}</p>
 {/if}
+ 
