@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 
 	let show = false;
-	onMount(() => (show = true));
+	onMount(() => setTimeout(() => (show = true), 500));
 	export let delay = 0;
 	export let text: string = '';
 
