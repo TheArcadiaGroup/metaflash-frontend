@@ -1,6 +1,6 @@
 <script lang="ts">
-	import TypeWriter from '$lib/components/TypeWriter.svelte';
 	import Circle from '$lib/icons/Circle.svelte';
+	import Typewriter from 'svelte-typewriter';
 
 	let speed = 20;
 </script>
@@ -30,35 +30,20 @@
 						<div class="text-[#FFD47A] circle"><Circle /></div>
 						<div class="text-[#6DFF46] circle"><Circle /></div>
 					</div>
-					<div class="terminal-content">
-						<div class="text-[#FFE600]">
-							<TypeWriter text="# Upload using cURL" />
-						</div>
-						<div>
-							<TypeWriter
-								text="$ curl --upload-file ./hello.txt https://transfer.sh/hello.txt https://transfer.sh/Bvdxtp/hello.txt"
-								delay={20 * speed}
-							/>
-						</div>
-						<div class="my-4" />
-						<div class="text-[#FFE600]">
-							<TypeWriter text="# Using the shell function" delay={120 * speed} />
-						</div>
-						<div>
-							<TypeWriter text="$ transfer hello.txt" delay={150 * speed} />
-							<TypeWriter
-								text="#####################################################"
-								delay={170 * speed}
-							/>
-							<TypeWriter text="100.0% https://transfer.sh/QkDtA5/hello.txt" delay={223 * speed} />
-						</div>
-						<div class="my-4" />
-						<div class="text-[#FFE600]">
-							<TypeWriter text="# Upload from web" delay={280 * speed} />
-						</div>
-						<div>
-							<TypeWriter text="Drag your files here, or click to browse." delay={300 * speed} />
-						</div>
+					<div class="terminal-content" style="--cursor-color: white">
+						<Typewriter mode={'cascade'}>
+							<div class="text-[#FFE600]"># Upload using cURL</div>
+							<div>$ curl --upload-file ./hello.txt https://transfer.sh/hello.txt</div>
+							<div>https://transfer.sh/Bvdxtp/hello.txt</div>
+
+							<div class="text-[#FFE600] mt-4"># Using the shell function</div>
+							<div>$ transfer hello.txt</div>
+							<div>##############################################</div>
+							<div>100.0% https://transfer.sh/QkDtA5/hello.txt</div>
+
+							<div class="text-[#FFE600] mt-4"># Upload from web</div>
+							<div>Drag your files here, or click to browse.</div>
+						</Typewriter>
 					</div>
 				</div>
 			</div>
