@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 
 	let show = false;
-	onMount(() => setTimeout(() => (show = true), 500));
+	onMount(() => setTimeout(() => (show = true), 1000));
 	export let delay = 0;
 	export let text: string = '';
 
@@ -30,4 +30,3 @@
 {#if show}
 	<p transition:typewriter>{@html text}</p>
 {/if}
- 

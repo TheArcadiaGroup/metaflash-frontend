@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Occhio Studios</title>
+	<title>Meta Flash</title>
 </svelte:head>
 
 <slot />

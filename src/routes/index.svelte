@@ -40,7 +40,7 @@
 								delay={20 * speed}
 							/>
 						</div>
-						<div class="my-2" />
+						<div class="my-4" />
 						<div class="text-[#FFE600]">
 							<TypeWriter text="# Using the shell function" delay={120 * speed} />
 						</div>
@@ -52,7 +52,7 @@
 							/>
 							<TypeWriter text="100.0% https://transfer.sh/QkDtA5/hello.txt" delay={223 * speed} />
 						</div>
-						<div class="my-2" />
+						<div class="my-4" />
 						<div class="text-[#FFE600]">
 							<TypeWriter text="# Upload from web" delay={280 * speed} />
 						</div>
@@ -143,7 +143,7 @@
 
 	.terminal-content {
 		@apply p-4;
-		@apply flex flex-col items-start;
+		@apply flex flex-col items-start justify-start;
 		@apply min-h-[16rem];
 		@apply w-full;
 		@apply overflow-auto;
