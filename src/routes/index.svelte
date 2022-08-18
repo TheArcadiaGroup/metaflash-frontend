@@ -15,13 +15,14 @@
 	<div class="middle">
 		<div class="middle-content">
 			<div class="left">
-				<div class="text-4xl text-center md:text-left">Aliqua id fugiat nostrud irure ex</div>
-				<div class="text-[#D0D1D2] text-sm leading-5 text-center md:text-left">
-					Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
-					deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat
-					incididunt sint deserunt ut voluptate aute id deserunt nisi.
+				<div class="text-4xl text-center md:text-left">
+					A Decentralized, Free and Open Flash Loan Aggregation Tool
 				</div>
-				<a href="."><button class="button">View on github</button></a>
+				<div class="text-[#D0D1D2] text-sm leading-5 text-center md:text-left">
+					Metaflash is a deployable liquidity aggregation tool that allows you to find the cheapest
+					and most efficient routes for flash liquidity.
+				</div>
+				<a href="."><button class="button">View on Github</button></a>
 			</div>
 			<div class="right">
 				<div class="terminal">
@@ -32,17 +33,10 @@
 					</div>
 					<div class="terminal-content" style="--cursor-color: white">
 						<Typewriter mode={'cascade'}>
-							<div class="text-[#FFE600]"># Upload using cURL</div>
-							<div>$ curl --upload-file ./hello.txt https://transfer.sh/hello.txt</div>
-							<div>https://transfer.sh/Bvdxtp/hello.txt</div>
-
-							<div class="text-[#FFE600] mt-4"># Using the shell function</div>
-							<div>$ transfer hello.txt</div>
-							<div>##############################################</div>
-							<div>100.0% https://transfer.sh/QkDtA5/hello.txt</div>
-
-							<div class="text-[#FFE600] mt-4"># Upload from web</div>
-							<div>Drag your files here, or click to browse.</div>
+							<div class="text-[#FFE600]"># Deploy Contracts</div>
+							<div>npx hardhat deploy --tags flashlender_eth --network ethmainnet</div>
+							<div>npx hardhat deploy --tags flashborrower --network ethmainnet</div>
+							<div>import "./interfaces/IFlashLender.sol";</div>
 						</Typewriter>
 					</div>
 				</div>
@@ -51,8 +45,9 @@
 	</div>
 	<div class="footer">
 		<div class="footer-content">
-			<div class="text-[#D0D1D2]">© Copyright Meta Flash Loan {new Date().getFullYear()}</div>
-			<div class="justify-self-center">Made with ❤️ by <a href=".">Lorem Ipsum</a></div>
+			<div class="justify-self-center">
+				Made with ❤️ by <a href="https://arcadia.agency">The Arcadia Group</a>
+			</div>
 		</div>
 	</div>
 	<div class="bg-image">
