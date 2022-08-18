@@ -10,7 +10,7 @@
 		<div class="w-6">
 			<img alt="logo" src="/images/png/logo.png" class="w-full" />
 		</div>
-		<div class="font-extrabold">Meta Flash</div>
+		<div class="font-extrabold">Metaflash</div>
 	</div>
 	<div class="middle">
 		<div class="middle-content">
