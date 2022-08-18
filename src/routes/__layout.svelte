@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Meta Flash</title>
+	<title>Metaflash</title>
 </svelte:head>
 
 <slot />
