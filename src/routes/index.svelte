@@ -22,7 +22,7 @@
 					Metaflash is a deployable liquidity aggregation tool that allows you to find the cheapest
 					and most efficient routes for flash liquidity.
 				</div>
-				<a href="."><button class="button">View on Github</button></a>
+				<a href="https://github.com/thearcadiagroup/metaflash"><button class="button">View on Github</button></a>
 			</div>
 			<div class="right">
 				<div class="terminal">
